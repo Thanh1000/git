@@ -1,3 +1,6 @@
+package git.domain
+
+import git.domain.{hash, sha1}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
