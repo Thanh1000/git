@@ -1,6 +1,7 @@
 package git
 
-import git.domain.hash
+import git.domain.usecase.HashObjectUseCase
+import git.domain.usecase.HashObjectUseCase.HashObjectCommand
 
 @main def main(str: String): Unit =
-  println(hash(str))
+  println(HashObjectUseCase.handleCommand(HashObjectCommand(str)))
