@@ -1,6 +1,5 @@
-package git.domain
+package git.domain.usecase
 
-import git.domain.usecase.HashObjectUseCase
 import git.domain.usecase.HashObjectUseCase.HashObjectCommand
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
