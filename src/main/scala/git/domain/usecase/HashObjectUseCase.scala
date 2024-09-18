@@ -1,11 +1,13 @@
 package git.domain.usecase
 
+import zio.{UIO, ZIO}
+
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 
 object HashObjectUseCase {
-  def handleCommand(hashObjectCommand: HashObjectCommand): String =
-    hash(hashObjectCommand.strToHash);
+  def handleCommand(hashObjectCommand: HashObjectCommand): UIO[String] =
+    ZIO.succeed(hash(hashObjectCommand.strToHash))
 
   private def hash(str: String): String = {
     val zeroByte = '\u0000'
